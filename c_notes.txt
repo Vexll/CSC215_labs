@@ -1,0 +1,5 @@
+- to run a c file 
+    command: ./<name_of_file>.c
+
+- to compile and see the errors
+    command: gcc <name_of_file>.c -o <name_of_file> -Wall
