@@ -1,5 +1,69 @@
-- to run a c file 
-    command: ./<name_of_file>.c
+- to execute a c file 
+    compile first and then execute your target file 
+    command: ./<file_name>
+
+
 
 - to compile and see the errors
-    command: gcc <name_of_file>.c -o <name_of_file> -Wall
+    command: gcc <file_name>.c -o <executable_file> -Wall
+    good practice to name executable_file like your_file
+
+
+
+- what does #include <header_file.h> means?
+    include is a preprocessor, where it's read the content of the header file.
+
+
+
+- function prototype = <return_type> <function_name>();
+    function declaration:
+        <return_type> <function_name>(<parameters>){
+            //body
+        }
+
+    remark if a function has not given return_type, C will consider it as int
+
+
+
+- printf() function:
+    specifiers (place holders):
+        %d - int (same as %i)
+        %ld - long int (same as %li)
+        %f - decimal floating point
+        %lf - double or long double
+        %e - scientific notation (similar to %E)
+        %c - char
+        %s - string
+        %o - signed octal
+        %x - hexadecimal (similar to %X)
+        %p - pointer
+        %% - %
+
+
+
+
+- scanf() function: to get the inputs from user:
+    & = refer to address
+        example
+               int x;
+               printf("enter a number");
+               scanf("%d", &x);
+               printf("your number is %d \n", x);
+    
+    same specifiers of printf function
+
+
+
+
+- Storage classes:
+    storage classes: is a modifier precedes the variable to define its scope and lifetime.
+        - auto: the default for local variable
+
+        - register: advice to the compiler to store a local variable in a register
+            # the advice is not necessarily taken by the compiler
+
+        - static: tells the compiler that the storage of that variable remains in existence
+            Local variable with static modifier remains in memory so that  can be accessed later
+            Global variable with static modifier are limited to the file where they are declared
+
+        - extern: points the identifier to a previously defined variable
