@@ -1,0 +1,30 @@
+Dynamic Allocation of memory
+
+- Heap is chuck of memory that users can use to dynamically allocated memory
+    # Lasts until freed, or program exits.
+
+
+- To allocate memory during runtime as needed, you have to import <stdlib.h>
+
+
+- To reserve a specified amount of free memory and return a void pointer to it, use one of the below functions:
+    # malloc(<size>)
+        - you must casted to your specified data type pointer, because the default is void for malloc function
+
+    # calloc(<number_of_elements>, <size>): barely similar to malloc function, but the difference in the signature of the function and zeros allocated bytes
+        - you must use cast
+    
+    # Realloc(<old_ptr>, <new_size>): this function attempts to resize the memory block pointed to by a pointer
+
+- To release a previously allocated memory block, use the below function:
+    # free(<ptr>): this function deallocates(cancel the allocation) the memory previously allocated
+
+    free do: 
+        - cancel allocation of memory 
+    
+    free doesn't do:
+        - does not clear the space 
+        - does not change the space
+        - does not set ptr to NULL
+    
+    good practice after using free function, set the ptr to NULL

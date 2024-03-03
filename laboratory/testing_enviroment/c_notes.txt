@@ -24,6 +24,9 @@
     remark if a function has not given return_type, C will consider it as int
 
 
+- Null in C = "\0"
+
+
 
 - printf() function:
     specifiers (place holders):
@@ -53,6 +56,11 @@
     same specifiers of printf function
 
 
+- better way to get user input is to use fgets() function:
+    fgets(<variable>, <size_of_variable>, stdin); --> stdin = standard input
+    this method usually use to avoid white spaces
+
+
 
 
 - Storage classes:
@@ -67,3 +75,11 @@
             Global variable with static modifier are limited to the file where they are declared
 
         - extern: points the identifier to a previously defined variable
+
+
+
+- Main function in C has 2 forms
+
+    1st(with parameters)
+
+    2nd(without parameters)

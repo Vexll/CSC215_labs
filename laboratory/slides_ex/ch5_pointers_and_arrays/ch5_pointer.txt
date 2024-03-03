@@ -1,0 +1,33 @@
+
+Pointers 
+
+- C provide two unary operators, '&' and '*' -->  for manipulating data using pointers.
+    & = address operator 
+    * = dereferencing(indirection) operator
+
+    remark:
+        # dereferenced pointer has new type, regardless of real type of data
+        # can explicitly cast any pointer type to any other pointer type
+
+
+
+- general pointer
+    void *pointer;
+    *pointer could point to any data type. i.e int, float or double 
+
+
+
+- void swap(int *a, int *b){
+        // swapping code
+    }
+    here we pass the address
+    swap(&a, &b);
+
+
+
+- function returning a pointer
+    function can return a pointer
+    Example -> int *myFunction(){......}
+    but never return a pointer to local variable, unless it's def as static 
+
+
