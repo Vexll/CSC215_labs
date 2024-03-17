@@ -1,26 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX_LENGTH 200
+
 void uppercase(char[]);
 
 int main()
 {
-    char test[] = "hello there_";
-    printf("the word before converting: %c\n", test[0]);
-    uppercase(test);
-    printf("the word after converting: %s\n", test);
+    char user_statement[MAX_LENGTH];
+
+    printf("Enter your text: ");
+    fgets(user_statement, sizeof(user_statement), stdin);
+    uppercase(user_statement);
+    printf("Uppercase string: %s\n", user_statement);
 }
 
-void uppercase(char str[])
+void uppercase(char *str)
 {
-    int length = strlen(str);
-    int i;
-    for (i = 0; i < length; i++)
+    while (*str != '\0')
     {
-        if ('a' <= str[i] && str[i] <= 'z')
+        if (*str >= 'a' && *str <= 'z')
         {
-            char new_letter = str[i] - 32;
-            str[i] = new_letter;
+            *str = *str - 32;
         }
+        str++;
     }
 }
